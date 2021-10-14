@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>小玩意</title></title>
+  </title>
+</head>
+
+<body>
+  <style id="style"></style>
+  <div id="div2">
+    <div id="demo"></div>
+  </div>
+  <div id="div1"></div>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #demo{
+      word-break: break-all;
+    }
+
+    #div1 {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50px;
+    }
+
+    #div1::before {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    #div1::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    @media (max-width:500px) {
+      #demo{
+        height: 50vh;
+        overflow: auto;
+      }
+
+      #div2{
+        height: 50vh;
+      }
+
+      #div1{
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+      
+    }
+  </style>
+  <script src="main.js"></script>
+  <!-- yarn global add parcel@1.9.7
+  parcel build src/index.html --no-minify --public-url . -->
+</body>
+
+</html>
